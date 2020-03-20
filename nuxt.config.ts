@@ -88,7 +88,8 @@ export default {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    quiet: false,
   },
   /*
    ** dev or deploy（github-pages）
