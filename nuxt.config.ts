@@ -89,7 +89,7 @@ export default {
         })
       }
     },
-    quiet: false,
+    quiet: false
   },
   /*
    ** dev or deploy（github-pages）
