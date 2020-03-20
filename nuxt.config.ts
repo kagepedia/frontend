@@ -89,5 +89,12 @@ export default {
         })
       }
     }
+  },
+  /*
+   ** dev or deploy（github-pages）
+   ** https://ja.nuxtjs.org/faq/github-pages/
+   */
+  router: {
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/frontend/' : ''
   }
 }
