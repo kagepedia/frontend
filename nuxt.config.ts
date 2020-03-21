@@ -28,7 +28,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['plugins/vuetify', 'plugins/contentful'],
+  plugins: ['plugins/vuetify'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -79,7 +79,8 @@ export default {
    ** https://ja.nuxtjs.org/faq/github-pages/
    */
   router: {
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/frontend/' : ''
+    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/frontend/' : '/',
+    mode: 'history'
   },
   /*
    ** contentful
