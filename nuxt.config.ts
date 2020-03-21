@@ -28,7 +28,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['plugins/vuetify'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -41,7 +41,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/vuetify'
   ],
   /*
    ** Axios module configuration
@@ -56,6 +57,7 @@ export default {
    ** Build configuration
    */
   build: {
+    transpile: ['vuetify/lib'],
     /*
      ** You can extend webpack config here
      */
