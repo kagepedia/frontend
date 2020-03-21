@@ -30,26 +30,4 @@
 </template>
 
 <script>
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
-import client from '~/plugins/contentful'
-
-export default {
-  async asyncData({ env, params }) {
-    let currentPost = null
-    await client
-      .getEntries({
-        content_type: env.CTF_BLOG_POST_TYPE_ID,
-        'fields.slug': params.slug
-      })
-      .then((res) => (currentPost = res.items[0]))
-      .catch(console.error)
-
-    return { currentPost }
-  },
-  methods: {
-    toHtmlString(obj) {
-      return documentToHtmlString(obj)
-    }
-  }
-}
 </script>
