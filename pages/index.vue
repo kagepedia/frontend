@@ -13,8 +13,16 @@
           />
           <li v-html="toHtmlString(post.fields.body)"></li>
           <li>{{ post.fields.publishDate }}</li>
+          <li class="slug">{{ post.fields.slug }}</li>
         </ul>
       </ul>
+      <div>
+        <!--nuxt-link
+          :to="{ name: 'posts-slug', params: { slug: post.fields.slug } }"
+        >
+          Read More
+        </nuxt-link-->
+      </div>
     </template>
     <template v-else>
       投稿された記事はありません。
