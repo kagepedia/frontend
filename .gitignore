@@ -91,3 +91,6 @@ sw.*
 
 # keys
 ssh-key/
+
+# progress
+progress.txt
