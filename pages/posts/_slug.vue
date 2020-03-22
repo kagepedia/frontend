@@ -3,8 +3,8 @@
     <template v-if="currentPost">
       {{ currentPost.fields.title }}
       <v-img
-        :src="currentPost.fields.image.fields.file.url"
-        :alt="currentPost.fields.image.fields.title"
+        :src="setEyeCatch(currentPost).url"
+        :alt="setEyeCatch(currentPost).title"
         :aspect-ratio="16 / 9"
         width="700"
         height="400"
@@ -31,6 +31,7 @@
 
 <script>
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { mapGetters } from 'vuex'
 import client from '~/plugins/contentful'
 
 export default {
@@ -50,6 +51,9 @@ export default {
     toHtmlString(obj) {
       return documentToHtmlString(obj)
     }
+  },
+  computed: {
+    ...mapGetters(['setEyeCatch'])
   }
 }
 </script>
