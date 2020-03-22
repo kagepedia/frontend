@@ -32,8 +32,8 @@
 
 <script>
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
-import client from '~/plugins/contentful'
 import { mapGetters } from 'vuex'
+import client from '~/plugins/contentful'
 
 export default {
   async asyncData({ env }) {
