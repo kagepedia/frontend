@@ -94,3 +94,6 @@ ssh-key/
 
 # progress
 progress.txt
+
+# contentful env
+.contentful.json
