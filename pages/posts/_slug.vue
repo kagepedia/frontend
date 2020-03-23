@@ -32,10 +32,11 @@
 <script>
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { mapGetters } from 'vuex'
-import client from '~/plugins/contentful'
+import { createClient } from '~/plugins/contentful'
 
 export default {
   async asyncData({ env, params }) {
+    const client = createClient()
     let currentPost = null
     await client
       .getEntries({
