@@ -1,4 +1,4 @@
-const config = require('./contentful.json')
+const config = require('./.contentful.json')
 export default {
   mode: 'universal',
   /*
