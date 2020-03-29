@@ -97,3 +97,5 @@ progress.txt
 
 # contentful env
 .contentful.json
+
+/.circleci/Contentful CMS
