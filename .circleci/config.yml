@@ -1,10 +1,4 @@
-version: 2.1
-
-parameters:
-  article_update:
-    type: boolean
-    default: false
-
+version: 2
 jobs:
   build:
     docker:
