@@ -14,16 +14,6 @@ jobs:
             - node_modules
           key: yarn-{{ checksum "package.json" }}
       - run: yarn run lint
-      - deploy:
-        name: contentful release
-        command: |
-          # これをビルド・デプロイのチェックに置き換えます (すなわち、現在のブランチが "release")
-          if [[ true ]]; then
-            curl --user ${CIRCLE_API_USER_TOKEN}: \
-            --data build_parameters[CIRCLE_JOB]=deploy \
-            --data revision=$CIRCLE_SHA1 \
-            https://circleci.com/api/v1.1/project/github/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME/tree/$CIRCLE_BRANCH
-          fi
   deploy:
     docker:
       - image: circleci/node:13.6.0
