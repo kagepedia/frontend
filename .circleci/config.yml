@@ -20,14 +20,9 @@ jobs:
             - node_modules
           key: yarn-{{ checksum "package.json" }}
       - run: yarn run lint
-      - run:
+      - deploy:
           name: contents_update
           command: |
-            echo $CIRCLE_API_USER_TOKEN;
-            echo $CIRCLE_SHA1;
-            echo $CIRCLE_PROJECT_USERNAME;
-            echo $CIRCLE_PROJECT_REPONAME;
-            echo $CIRCLE_BRANCH;
             if [[ true ]]; then
               curl --user ${CIRCLE_API_USER_TOKEN}: \
               --data build_parameters[CIRCLE_JOB]=deploy \
