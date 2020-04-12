@@ -1,10 +1,4 @@
-version: 2.1
-
-parameters:
-  article_update:
-    type: boolean
-    default: false
-
+version: 2
 jobs:
   build:
     docker:
@@ -43,14 +37,12 @@ jobs:
       - run: git config user.email $GITHUB_EMAIL
       - run: yarn run generate:gh-pages
       - run: yarn run deploy:gh-pages
+# branchがmasterの時のworkflow
 workflows:
   version: 2
-  build-deploy:
+  build:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+        filters:
+          branches:
+            only: master
