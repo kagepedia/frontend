@@ -94,10 +94,12 @@ export default {
     routes() {
       const client = createClient()
       return client
-      .getEntries(process.env.CTF_BLOG_POST_TYPE_ID)
-      .then((entries:any) => {
-        return [...entries.items.map((entry:any) => `/posts/${entry.fields.slug}`)]
-      })
+        .getEntries(process.env.CTF_BLOG_POST_TYPE_ID)
+        .then((entries: any) => {
+          return [
+            ...entries.items.map((entry: any) => `/posts/${entry.fields.slug}`)
+          ]
+        })
     }
   },
   env: {
