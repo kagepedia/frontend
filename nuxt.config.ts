@@ -101,7 +101,7 @@ export default {
 
       const urls: string[] = []
       posts.items.forEach((val: any, idx: number) => {
-        urls[idx] = `/posts/${val.fields.slug}`
+        urls[idx] = 'posts/' + val.fields.slug
       })
       return urls
     }
