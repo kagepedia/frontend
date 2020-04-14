@@ -93,17 +93,11 @@ export default {
     // Payload機能
     routes() {
       const client = createClient()
-
-      const posts: any = client.getEntries({
-        content_type: process.env.CTF_BLOG_POST_TYPE_ID,
-        order: '-fields.publishDate'
+      return client
+      .getEntries(process.env.CTF_BLOG_POST_TYPE_ID)
+      .then((entries:any) => {
+        return [...entries.items.map((entry:any) => `/posts/${entry.fields.slug}`)]
       })
-
-      const urls: string[] = []
-      posts.items.forEach((val: any, idx: number) => {
-        urls[idx] = 'posts/' + val.fields.slug
-      })
-      return urls
     }
   },
   env: {
