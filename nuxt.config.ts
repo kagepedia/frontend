@@ -30,7 +30,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['plugins/vuetify', 'plugins/contentful'],
+  plugins: ['plugins/vuetify', 'plugins/contentful', '~/plugins/prism'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -43,7 +43,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/markdownit'
     // '@nuxtjs/vuetify'
   ],
   /*
@@ -106,5 +107,12 @@ export default {
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+  },
+  markdownit: {
+    injected: true,
+    breaks: true,
+    html: true,
+    linkify: true,
+    typography: true
   }
 }

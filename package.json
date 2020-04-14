@@ -18,10 +18,12 @@
     "@nuxt/typescript-runtime": "^0.4.0",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/pwa": "^3.0.0-0",
     "contentful": "^7.14.0",
     "nuxt": "^2.0.0",
-    "nuxt-property-decorator": "^2.5.1"
+    "nuxt-property-decorator": "^2.5.1",
+    "prismjs": "^1.20.0"
   },
   "devDependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",

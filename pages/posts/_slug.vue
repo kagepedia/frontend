@@ -10,7 +10,10 @@
         height="400"
         class="mx-auto"
       />
-      <div v-html="toHtmlString(currentPost.fields.body)"></div>
+      <div
+        class="line-numbers"
+        v-html="$md.render(currentPost.fields.body)"
+      ></div>
       <div>{{ currentPost.fields.publishDate }}</div>
     </template>
 
@@ -30,9 +33,9 @@
 </template>
 
 <script>
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { mapGetters } from 'vuex'
 import { createClient } from '~/plugins/contentful'
+import { Prism } from '~/plugins/prism'
 
 export default {
   async asyncData({ env, params }) {
@@ -48,10 +51,8 @@ export default {
 
     return { currentPost }
   },
-  methods: {
-    toHtmlString(obj) {
-      return documentToHtmlString(obj)
-    }
+  mounted() {
+    Prism.highlightAll()
   },
   computed: {
     ...mapGetters(['setEyeCatch'])

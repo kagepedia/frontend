@@ -11,7 +11,7 @@
             max-width="400"
             max-height="225"
           />
-          <li v-html="toHtmlString(post.fields.body)"></li>
+          <div class="line-numbers" v-html="$md.render(post.fields.body)"></div>
           <li>{{ post.fields.publishDate }}</li>
           <li class="slug">{{ post.fields.slug }}</li>
         </ul>
@@ -31,9 +31,9 @@
 </template>
 
 <script>
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { mapGetters } from 'vuex'
 import { createClient } from '~/plugins/contentful'
+import { Prism } from '~/plugins/prism'
 
 export default {
   async asyncData({ env }) {
@@ -48,10 +48,8 @@ export default {
       .catch(console.error)
     return { posts }
   },
-  methods: {
-    toHtmlString(obj) {
-      return documentToHtmlString(obj)
-    }
+  mounted() {
+    Prism.highlightAll()
   },
   computed: {
     ...mapGetters(['setEyeCatch'])
