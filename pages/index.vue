@@ -11,7 +11,7 @@
             max-width="400"
             max-height="225"
           />
-          <div class="line-numbers" v-html="$md.render(post.fields.body)"></div>
+          <div v-html="$md.render(post.fields.body)"></div>
           <li>{{ post.fields.publishDate }}</li>
           <li class="slug">{{ post.fields.slug }}</li>
         </ul>
@@ -33,7 +33,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import { createClient } from '~/plugins/contentful'
-import { Prism } from '~/plugins/prism'
 
 export default {
   async asyncData({ env }) {
@@ -47,9 +46,6 @@ export default {
       .then((res) => (posts = res.items))
       .catch(console.error)
     return { posts }
-  },
-  mounted() {
-    Prism.highlightAll()
   },
   computed: {
     ...mapGetters(['setEyeCatch'])
