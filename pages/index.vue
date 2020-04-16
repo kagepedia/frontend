@@ -11,9 +11,8 @@
             max-width="400"
             max-height="225"
           />
-          <div v-html="$md.render(post.fields.body)"></div>
           <li>{{ post.fields.publishDate }}</li>
-          <li class="slug">{{ post.fields.slug }}</li>
+          <li class="slug">{{ post.fields.discription }}</li>
         </ul>
         <div>
           <nuxt-link
