@@ -12,7 +12,7 @@
             max-height="225"
           />
           <li>{{ post.fields.publishDate }}</li>
-          <li class="slug">{{ post.fields.discription }}</li>
+          <li class="slug nl2br">{{ post.fields.discription }}</li>
         </ul>
         <div>
           <nuxt-link
@@ -28,6 +28,12 @@
     </template>
   </v-container>
 </template>
+
+<style>
+.nl2br {
+  white-space: pre;
+}
+</style>
 
 <script>
 import { mapGetters } from 'vuex'
