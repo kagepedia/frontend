@@ -32,6 +32,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import { createClient } from '~/plugins/contentful'
+import Prism from '~/plugins/prism'
 
 export default {
   async asyncData({ env, params }) {
@@ -46,6 +47,9 @@ export default {
       .catch(console.error)
 
     return { currentPost }
+  },
+  mounted() {
+    Prism.highlightAll()
   },
   computed: {
     ...mapGetters(['setEyeCatch'])

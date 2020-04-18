@@ -23,7 +23,8 @@
     "contentful": "^7.14.0",
     "markdown-it-toc": "^1.1.0",
     "nuxt": "^2.0.0",
-    "nuxt-property-decorator": "^2.5.1"
+    "nuxt-property-decorator": "^2.5.1",
+    "prismjs": "^1.20.0"
   },
   "devDependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
