@@ -16,6 +16,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    '@typescript-eslint/no-unused-vars': 'off',
     'vue/html-closing-bracket-newline': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
