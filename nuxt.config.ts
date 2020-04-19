@@ -30,7 +30,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['plugins/vuetify', 'plugins/contentful', 'plugins/prism'],
+  plugins: [
+    'plugins/vuetify',
+    'plugins/contentful',
+    'plugins/prism',
+    'plugins/day'
+  ],
   /*
    ** Nuxt.js dev-modules
    */

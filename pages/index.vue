@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
     <template v-if="posts.length">
-      <div id="box" class="clearfix">
-        <ul v-for="(post, i) in posts" :key="i" class="clearfix">
+      <div>
+        <ul v-for="(post, i) in posts" :key="i" class="list">
           <nuxt-link
             class="link"
             :to="{
@@ -10,8 +10,8 @@
               params: { slug: post.fields.slug }
             }"
           >
-            <li class="clearfix">
-              <dl class="clearfix">
+            <li>
+              <dl>
                 <dt>
                   <v-img
                     :src="setEyeCatch(post).url"
@@ -23,7 +23,12 @@
                 </dt>
                 <dd>
                   <p>{{ post.fields.title }}</p>
-                  <p>{{ post.fields.publishDate }}</p>
+                  <p
+                    v-text="
+                      $dayjs(post.fields.publishDate).format('YYYY/MM/DD') +
+                        '投稿'
+                    "
+                  ></p>
                   <p class="nl2br">{{ post.fields.discription }}</p>
                 </dd>
               </dl>
@@ -45,18 +50,20 @@
 }
 .link {
   text-decoration: none;
-}
-.link:hover {
-  text-decoration: none;
-  p {
-    color: red;
+  &:hover {
+    text-decoration: none;
+    p {
+      color: red;
+    }
   }
-}
-p {
-  color: black;
+  p {
+    color: black;
+  }
 }
 ul {
   list-style: none;
+  outline: solid 2px;
+  margin-bottom: 30px;
 }
 .nl2br {
   white-space: pre;
