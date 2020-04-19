@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
     <template v-if="posts.length">
-      <div id="box" class="clearfix">
-        <ul v-for="(post, i) in posts" :key="i" class="clearfix">
+      <div>
+        <ul v-for="(post, i) in posts" :key="i">
           <nuxt-link
             class="link"
             :to="{
@@ -10,8 +10,8 @@
               params: { slug: post.fields.slug }
             }"
           >
-            <li class="clearfix">
-              <dl class="clearfix">
+            <li>
+              <dl>
                 <dt>
                   <v-img
                     :src="setEyeCatch(post).url"
@@ -38,11 +38,6 @@
   </v-container>
 </template>
 <style lang="scss">
-.clearfix::after {
-  content: '';
-  display: block;
-  clear: both;
-}
 .link {
   text-decoration: none;
 }
