@@ -8,47 +8,22 @@
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="true" id="app" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-content" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><div class="v-content__wrap"><div class="container"><div class="container container--fluid">
-    circleciでcontentful自動更新
-    <div role="img" aria-label="defaultImage" class="v-responsive v-image mx-auto" style="height:400px;width:700px"><div class="v-responsive__sizer" style="padding-bottom:56.25%"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position:center center"></div><div class="v-responsive__content"></div></div> <div><h3><a id="_0"></a>設定</h3>
-<h4><a id="_1"></a>環境変数を設定する</h4>
-<p>config.ymlに記述しても良いが、Githubなどで公開する場合、セキュリティ的によくない。<br>
-なので、WEB-UIを利用した環境変数を設定していく。<br>
-Project Settings　-> Environment Variablesで変数と値をセットしていく<br>
-ここでセットされた物はこのプロジェクト内でしか利用できない、最小の単位！<br>
-セットした変数をconfig.yml内に記述して処理を走らせると値を保持したまま実行される。<br>
-参考URLは<a href="https://circleci.com/docs/ja/2.0/env-vars/" title="環境変数">こちら</a></p>
-<h4><a id="ContentfulAPI_9"></a>ContentfulのAPIトリガーで自動デプロイ</h4>
-<ol>
-<li>Contentful側でwebhooに関するURLを設定する。</li>
-<li>CircleCIでパーソンAPIトークンを発行</li>
-<li>トークンを持たせて走らせたいjobを決める（config.ymlに記述）<br>
-※APIトリガー時のWorkflow設定が現段階では不可能なので、このような設定を行った。<br>
-別のやり方もあるそうなのでで試してみたい。<br>
-参考URLは<a href="https://circleci.com/docs/ja/2.0/api-job-trigger/" title="APIトリガー">こちら</a></li>
-</ol>
-<p>今回はこの辺で、ﾉｼ</p>
-<h6><a id="markdow_18"></a>おまけ（markdowに対応しました）</h6>
-<pre><code class="language-js">const test = 1;
-console.log(test);
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>table1</td>
-</tr>
-<tr>
-<td>table2</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>引用コード</p>
+    リッチテキスト
+    <div role="img" aria-label="サンプル画像" class="v-responsive v-image mx-auto" style="height:400px;width:700px"><div class="v-responsive__sizer" style="padding-bottom:56.25%"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position:center center"></div><div class="v-responsive__content"></div></div> <div><blockquote>
+<p>aaaaa</p>
 </blockquote>
-</div> <div>2020-04-13T00:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(n){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:n,linkType:"Space",id:"gl5thp3chw76"}},id:"7teMeoMeopHyrpEMCzrYue",type:"Entry",createdAt:"2020-04-15T15:56:32.075Z",updatedAt:"2020-04-18T08:48:09.636Z",environment:{sys:{id:"master",type:n,linkType:"Environment"}},revision:5,contentType:{sys:{type:n,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"circleciでcontentful自動更新",discription:"circleciまとめたもの\nですです。　スペース代入 hankakusupe-sudainyuu",slug:"circleci",body:'### 設定\n#### 環境変数を設定する\nconfig.ymlに記述しても良いが、Githubなどで公開する場合、セキュリティ的によくない。\nなので、WEB-UIを利用した環境変数を設定していく。\nProject Settings　-> Environment Variablesで変数と値をセットしていく\nここでセットされた物はこのプロジェクト内でしか利用できない、最小の単位！\nセットした変数をconfig.yml内に記述して処理を走らせると値を保持したまま実行される。\n参考URLは[こちら](https://circleci.com/docs/ja/2.0/env-vars/ "環境変数")\n\n#### ContentfulのAPIトリガーで自動デプロイ\n1. Contentful側でwebhooに関するURLを設定する。\n2. CircleCIでパーソンAPIトークンを発行\n3. トークンを持たせて走らせたいjobを決める（config.ymlに記述）\n※APIトリガー時のWorkflow設定が現段階では不可能なので、このような設定を行った。\n別のやり方もあるそうなのでで試してみたい。\n参考URLは[こちら](https://circleci.com/docs/ja/2.0/api-job-trigger/ "APIトリガー")\n\n今回はこの辺で、ﾉｼ\n###### おまけ（markdowに対応しました）\n\n```js\nconst test = 1;\nconsole.log(test);\n```\n\n\n| Header     |\n| ---------- |\n| table1       |\n| table2       |\n\n> 引用コード',publishDate:"2020-04-13T00:00+09:00"}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/circleci"}}("Link")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
+<ul>
+<li>
+<p>aaaaa</p>
+</li>
+<li>
+<p>aaaaa</p>
+<p>aaaaaaa</p>
+</li>
+</ul>
+<p><s>aaaaaaaa</s><br>
+aaaaaaaa<br>
+console.log(1234);</p>
+</div> <div>2020-05-01T00:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(a,e,t,n,d,o,p,y,s,l,i,c,T,r,u,_){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:n,linkType:o,id:p}},id:"7jN7iB0FTBsl0bE6FQi97L",type:"Entry",createdAt:y,updatedAt:y,environment:{sys:{id:s,type:n,linkType:l}},revision:1,contentType:{sys:{type:n,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"リッチテキスト",discription:"リッチテキストでの表示確認",image:{sys:{space:{sys:{type:n,linkType:o,id:p}},id:"4qWwlijZbbVLGW2a0lrZLC",type:"Asset",createdAt:i,updatedAt:i,environment:{sys:{id:s,type:n,linkType:l}},revision:1,locale:"ja"},fields:{title:c,description:c,file:{url:"//images.ctfassets.net/gl5thp3chw76/4qWwlijZbbVLGW2a0lrZLC/4d9ade2be47d1a27c19e516e3ea5a9a5/____________________________2020-03-24_23.41.58.png",details:{size:24154,image:{width:321,height:318}},fileName:"スクリーンショット 2020-03-24 23.41.58.png",contentType:"image/png"}}},slug:"tich-text",body:"> aaaaa\n\n- aaaaa\n- aaaaa\n\n  aaaaaaa\n\n~~aaaaaaaa~~\n    aaaaaaaa\n    console.log(1234);\n\n",publishDate:"2020-05-01T00:00+09:00",contents:{data:{},content:[{data:{},content:[{data:{},marks:[{type:t}],value:"aaaaa",nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[{type:"italic"}],value:T,nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[{type:"bold"}],value:"aaaaaaaaaaaa",nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[{type:"underline"}],value:"aaaaaaaaaaaaaa",nodeType:a}],nodeType:e},{data:{},content:[{data:{},content:[{data:{},content:[{data:{},marks:[],value:r,nodeType:a}],nodeType:e}],nodeType:d},{data:{},content:[{data:{},content:[{data:{},marks:[],value:r,nodeType:a}],nodeType:e}],nodeType:d}],nodeType:"unordered-list"},{data:{},content:[{data:{},content:[{data:{},content:[{data:{},marks:[],value:u,nodeType:a}],nodeType:e}],nodeType:d},{data:{},content:[{data:{},content:[{data:{},marks:[],value:u,nodeType:a}],nodeType:e}],nodeType:d}],nodeType:"ordered-list"},{data:{},content:[{data:{},content:[{data:{},marks:[],value:_,nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[],value:_,nodeType:a}],nodeType:e}],nodeType:"blockquote"},{data:{},content:[],nodeType:"hr"},{data:{},content:[{data:{},marks:[],value:T,nodeType:a}],nodeType:"heading-1"},{data:{},content:[{data:{},marks:[{type:t}],value:"console.log(1233)",nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[{type:t}],value:"function() {",nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[{type:t}],value:"  const a = 10, b = 20;",nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[{type:t}],value:"  c = a + b",nodeType:a}],nodeType:e},{data:{},content:[{data:{},marks:[{type:t}],value:"}",nodeType:a}],nodeType:e}],nodeType:"document"}}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/tich-text"}}("text","paragraph","code","Link","list-item","Space","gl5thp3chw76","2020-05-03T04:01:41.296Z","master","Environment","2020-05-03T03:59:48.894Z","サンプル画像","aaaaaaa","aaaaaaaaa","aaaaaaaa","aaaaaaaaaaaaaaaaa")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
   </body>
 </html>
