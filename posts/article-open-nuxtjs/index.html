@@ -8,47 +8,11 @@
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="true" id="app" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-content" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><div class="v-content__wrap"><div class="container"><div class="container container--fluid">
-    circleciでcontentful自動更新
-    <div role="img" aria-label="sample" class="v-responsive v-image mx-auto" style="height:400px;width:700px"><div class="v-responsive__sizer" style="padding-bottom:56.25%"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position:center center"></div><div class="v-responsive__content"></div></div> <div><h3><a id="_0"></a>設定</h3>
-<h4><a id="_1"></a>環境変数を設定する</h4>
-<p>config.ymlに記述しても良いが、Githubなどで公開する場合、セキュリティ的によくない。<br>
-なので、WEB-UIを利用した環境変数を設定していく。<br>
-Project Settings　-> Environment Variablesで変数と値をセットしていく<br>
-ここでセットされた物はこのプロジェクト内でしか利用できない、最小の単位！<br>
-セットした変数をconfig.yml内に記述して処理を走らせると値を保持したまま実行される。<br>
-参考URLは<a href="https://circleci.com/docs/ja/2.0/env-vars/" title="環境変数">こちら</a></p>
-<h4><a id="ContentfulAPI_9"></a>ContentfulのAPIトリガーで自動デプロイ</h4>
-<ol>
-<li>Contentful側でwebhooに関するURLを設定する。</li>
-<li>CircleCIでパーソンAPIトークンを発行</li>
-<li>トークンを持たせて走らせたいjobを決める（config.ymlに記述）<br>
-※APIトリガー時のWorkflow設定が現段階では不可能なので、このような設定を行った。<br>
-別のやり方もあるそうなのでで試してみたい。<br>
-参考URLは<a href="https://circleci.com/docs/ja/2.0/api-job-trigger/" title="APIトリガー">こちら</a></li>
-</ol>
-<p>今回はこの辺で、ﾉｼ</p>
-<h6><a id="markdow_18"></a>おまけ（markdowに対応しました）</h6>
-<pre><code class="language-js">const test = 1;
-console.log(test);
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>table1</td>
-</tr>
-<tr>
-<td>table2</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>引用コード</p>
-</blockquote>
-</div> <div>2020-04-13T00:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(e,n,t,i,s,c){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:e,linkType:n,id:t}},id:"7teMeoMeopHyrpEMCzrYue",type:"Entry",createdAt:"2020-04-15T15:56:32.075Z",updatedAt:"2020-07-04T14:10:14.882Z",environment:{sys:{id:i,type:e,linkType:s}},revision:7,contentType:{sys:{type:e,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"circleciでcontentful自動更新",discription:"circleciまとめたもの\nですです。　スペース代入 hankakusupe-sudainyuu テストおおおおおおおおおおおおおおおおおおおおお",image:{sys:{space:{sys:{type:e,linkType:n,id:t}},id:"2dkgo5UPUmOqefnpXtoJb5",type:"Asset",createdAt:c,updatedAt:c,environment:{sys:{id:i,type:e,linkType:s}},revision:1,locale:"ja"},fields:{title:"sample",description:"サンプル",file:{url:"//images.ctfassets.net/gl5thp3chw76/2dkgo5UPUmOqefnpXtoJb5/03c78edf994d64c9cff3ea3df16df7d6/sample.png",details:{size:2068,image:{width:300,height:150}},fileName:"sample.png",contentType:"image/png"}}},slug:"circleci",body:'### 設定\n#### 環境変数を設定する\nconfig.ymlに記述しても良いが、Githubなどで公開する場合、セキュリティ的によくない。\nなので、WEB-UIを利用した環境変数を設定していく。\nProject Settings　-> Environment Variablesで変数と値をセットしていく\nここでセットされた物はこのプロジェクト内でしか利用できない、最小の単位！\nセットした変数をconfig.yml内に記述して処理を走らせると値を保持したまま実行される。\n参考URLは[こちら](https://circleci.com/docs/ja/2.0/env-vars/ "環境変数")\n\n#### ContentfulのAPIトリガーで自動デプロイ\n1. Contentful側でwebhooに関するURLを設定する。\n2. CircleCIでパーソンAPIトークンを発行\n3. トークンを持たせて走らせたいjobを決める（config.ymlに記述）\n※APIトリガー時のWorkflow設定が現段階では不可能なので、このような設定を行った。\n別のやり方もあるそうなのでで試してみたい。\n参考URLは[こちら](https://circleci.com/docs/ja/2.0/api-job-trigger/ "APIトリガー")\n\n今回はこの辺で、ﾉｼ\n###### おまけ（markdowに対応しました）\n\n```js\nconst test = 1;\nconsole.log(test);\n```\n\n\n| Header     |\n| ---------- |\n| table1       |\n| table2       |\n\n> 引用コード',publishDate:"2020-04-13T00:00+09:00"}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/circleci"}}("Link","Space","gl5thp3chw76","master","Environment","2020-06-16T14:20:36.240Z")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
+    記事を公開しました２
+    <div role="img" aria-label="スクリーンショット 2020-01-26 22.08.48" class="v-responsive v-image mx-auto" style="height:400px;width:700px"><div class="v-responsive__sizer" style="padding-bottom:56.25%"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position:center center"></div><div class="v-responsive__content"></div></div> <div><h3><a id="_0"></a>記事を公開しました</h3>
+<p>テストです。</p>
+<p>ああああああ<br>
+いいいいいい</p>
+</div> <div>2020-09-21T22:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(e,t,n,i,s,_,l){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:e,linkType:t,id:n}},id:"2kTR5uQyfl8w89oGMJWG6p",type:"Entry",createdAt:i,updatedAt:i,environment:{sys:{id:s,type:e,linkType:_}},revision:1,contentType:{sys:{type:e,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"記事を公開しました２",discription:"nuxt.jsについて記事を書きます。",image:{sys:{space:{sys:{type:e,linkType:t,id:n}},id:"6ClLJIbW0fMNVsogW3NB8e",type:"Asset",createdAt:l,updatedAt:l,environment:{sys:{id:s,type:e,linkType:_}},revision:1,locale:"ja"},fields:{title:"スクリーンショット 2020-01-26 22.08.48",file:{url:"//images.ctfassets.net/gl5thp3chw76/6ClLJIbW0fMNVsogW3NB8e/4309909e3ff092d179fc7c1533fa645f/____________________________2020-01-26_22.08.48.png",details:{size:9855,image:{width:382,height:149}},fileName:"スクリーンショット 2020-01-26 22.08.48.png",contentType:"image/png"}}},slug:"article-open-nuxtjs",body:"### 記事を公開しました\nテストです。\n\nああああああ\nいいいいいい",publishDate:"2020-09-21T22:00+09:00"}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/article-open-nuxtjs"}}("Link","Space","gl5thp3chw76","2020-09-22T13:20:17.619Z","master","Environment","2020-02-11T12:53:59.739Z")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
   </body>
 </html>
