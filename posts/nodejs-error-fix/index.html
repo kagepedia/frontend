@@ -8,42 +8,34 @@
   </head>
   <body>
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="true" id="app" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><main class="v-content" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><div class="v-content__wrap"><div class="container"><div class="container container--fluid">
-    Next.js+ContentfulでJAMStackなブログを構築してみた（２）〜Contentful側の設定〜
-    <div role="img" aria-label="Next.js+ContentfulでJAMStackなブログを構築してみた（２）" class="v-responsive v-image mx-auto" style="height:400px;width:700px"><div class="v-responsive__sizer" style="padding-bottom:56.25%"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position:center center"></div><div class="v-responsive__content"></div></div> <div><p>[[toc]]</p>
-<h2><a id="_2"></a>はじめに</h2>
-<p>前回Next.jsとTailwindCSSでの環境が整ったので、今回はContentful側の設定を行っていきます。<br>
-現在（2020/10/11）時点での設定で記事を書き進めていきます。</p>
-<h2><a id="Contentful_6"></a>Contentful管理画面</h2>
-<p>管理画面側でCMSとして必要な項目を設定していきます。<br>
-まず<a href="https://www.contentful.com/" title="contentful">contentful</a>で登録を行ってください。<br>
-料金はフリープランで大丈夫です。<br>
-するとcontentfulの管理画面に入ることができます。</p>
-<h3><a id="Content_Model_12"></a>Content Modelの作成</h3>
-<p>Content ModelタグからModel Typeを作成します。<br>
-「Name」を入力すると「Api Identifier」は自動的に出力されます。<br>
-「Create」ボタンを押下すると、Content Typeが追加されたことが確認できると思います。<br>
-作成したContent Typeの中に入りフィールドの設定を行っていきます。<br>
-<img src="//images.ctfassets.net/gl5thp3chw76/1Q2d6dcx2LmbsIBxvQdqOM/aadf6cc61e963c073c216cbe120aadd3/content_model-sample.png" alt="Content modelサンプル画像"></p>
-<h3><a id="_19"></a>フィールドの設定</h3>
-<p>フィールドは、「タイトル」・「詳細情報」・「画像」・「スラッグ」・「本文」・「公開日時」を追加していきます。<br>
-Add fieldボタンから追加したい項目を設定していきます。<br>
-「タイトル」を追加していきます。<br>
-Textフィールドを追加します。Nameは「title」を入れ、Short text, exact searchにチェックをします。その他バリデーション等は自分でカスタマイズできます。今回は必須項目だけつけておきます。<br>
-<img src="//images.ctfassets.net/gl5thp3chw76/3iC9KTocffyNLWtEoYEEft/3c8346b3484c4f50984d01c3eccf0cbc/content-field.png" alt="content-field"></p>
-<h3><a id="_26"></a>記事の追加</h3>
-<p>Contentタグから記事を追加していきます。<br>
-先ほど項目を設定したので、データを実際に入力していきます。</p>
-<h3><a id="_30"></a>メディアの追加</h3>
-<p>Mediaタグでファイル類をアップロードできます。</p>
-<h3><a id="_33"></a>その他設定</h3>
-<p>Webhooksの設定は重要になってきます。ホスティングはVercelにデプロイしていますが、記事を更新するたびにデプロイが走らないと記事が更新されないので設定をします。<br>
-また、必須ではないですがCircleCIなどで回すときも設定が必要になってきます。</p>
-<h2><a id="_37"></a>まとめ</h2>
-<p>本記事では、contentful側の設定を行っていきました。無料プランでしたが、個人ブログを運営するのであれば十分かなと思っています。今回設定しているものはあくまでスタンダードな構成なので、ブログの構成によってカスタマイズしてみると面白いと思います。</p>
-<h2><a id="_40"></a>参考</h2>
-<ul>
-<li><a href="https://blog.cloud-acct.com/posts/blog-contentful-signup" title="【画像で説明】Contentfulの使い方。初期設定と各メニューについて学ぶ">【画像で説明】Contentfulの使い方。初期設定と各メニューについて学ぶ</a></li>
-</ul>
-</div> <div>2020-10-12T23:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(t,n,e,o,c,l,s,_){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:t,linkType:n,id:e}},id:"1orWZsPCx16f6CAv6nnULD",type:"Entry",createdAt:o,updatedAt:o,environment:{sys:{id:c,type:t,linkType:l}},revision:1,contentType:{sys:{type:t,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"Next.js+ContentfulでJAMStackなブログを構築してみた（２）〜Contentful側の設定〜",discription:"今回はContentfulの管理画面で記事に必要な項目を設定していきます。",image:{sys:{space:{sys:{type:t,linkType:n,id:e}},id:"73TsoM3659dcKvJZRawlKz",type:"Asset",createdAt:s,updatedAt:s,environment:{sys:{id:c,type:t,linkType:l}},revision:1,locale:"ja"},fields:{title:_,description:_,file:{url:"//images.ctfassets.net/gl5thp3chw76/73TsoM3659dcKvJZRawlKz/c96a5ebc5a4c0585dcc08605d1051b49/Next.js_Contentful______JAMStack________________________________________________.png",details:{size:761951,image:{width:1200,height:630}},fileName:"Next.js+ContentfulでJAMStackなブログを構築してみた（２）.png",contentType:"image/png"}}},slug:"nextjs-contentful-blog-2",body:'[[toc]]\n\n## はじめに\n前回Next.jsとTailwindCSSでの環境が整ったので、今回はContentful側の設定を行っていきます。\n現在（2020/10/11）時点での設定で記事を書き進めていきます。\n\n## Contentful管理画面\n管理画面側でCMSとして必要な項目を設定していきます。\nまず[contentful](https://www.contentful.com/ "contentful")で登録を行ってください。\n料金はフリープランで大丈夫です。\nするとcontentfulの管理画面に入ることができます。\n\n### Content Modelの作成\nContent ModelタグからModel Typeを作成します。\n「Name」を入力すると「Api Identifier」は自動的に出力されます。\n「Create」ボタンを押下すると、Content Typeが追加されたことが確認できると思います。\n作成したContent Typeの中に入りフィールドの設定を行っていきます。\n![Content modelサンプル画像](//images.ctfassets.net/gl5thp3chw76/1Q2d6dcx2LmbsIBxvQdqOM/aadf6cc61e963c073c216cbe120aadd3/content_model-sample.png)\n\n### フィールドの設定\nフィールドは、「タイトル」・「詳細情報」・「画像」・「スラッグ」・「本文」・「公開日時」を追加していきます。\nAdd fieldボタンから追加したい項目を設定していきます。\n「タイトル」を追加していきます。\nTextフィールドを追加します。Nameは「title」を入れ、Short text, exact searchにチェックをします。その他バリデーション等は自分でカスタマイズできます。今回は必須項目だけつけておきます。\n![content-field](//images.ctfassets.net/gl5thp3chw76/3iC9KTocffyNLWtEoYEEft/3c8346b3484c4f50984d01c3eccf0cbc/content-field.png)\n\n### 記事の追加\nContentタグから記事を追加していきます。\n先ほど項目を設定したので、データを実際に入力していきます。\n\n### メディアの追加\nMediaタグでファイル類をアップロードできます。\n\n### その他設定\nWebhooksの設定は重要になってきます。ホスティングはVercelにデプロイしていますが、記事を更新するたびにデプロイが走らないと記事が更新されないので設定をします。\nまた、必須ではないですがCircleCIなどで回すときも設定が必要になってきます。\n\n## まとめ\n本記事では、contentful側の設定を行っていきました。無料プランでしたが、個人ブログを運営するのであれば十分かなと思っています。今回設定しているものはあくまでスタンダードな構成なので、ブログの構成によってカスタマイズしてみると面白いと思います。\n\n## 参考\n- [【画像で説明】Contentfulの使い方。初期設定と各メニューについて学ぶ](https://blog.cloud-acct.com/posts/blog-contentful-signup "【画像で説明】Contentfulの使い方。初期設定と各メニューについて学ぶ")\n',publishDate:"2020-10-12T23:00+09:00"}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/nextjs-contentful-blog-2"}}("Link","Space","gl5thp3chw76","2020-10-12T14:21:32.760Z","master","Environment","2020-10-11T09:35:38.348Z","Next.js+ContentfulでJAMStackなブログを構築してみた（２）")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
+    Node.jsのバージョンあげたら過去のプロジェクトでエラーが出たので解決方法の備忘録
+    <div role="img" aria-label="defaultImage" class="v-responsive v-image mx-auto" style="height:400px;width:700px"><div class="v-responsive__sizer" style="padding-bottom:56.25%"></div><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-position:center center"></div><div class="v-responsive__content"></div></div> <div><p>Node.jsでフロント用のテンプレートを作成しているリポジトリがあるのですが、それは10ヶ月前に作成しました。他のプロジェクトでNode.jsのバージョンをあげて作業した際に、過去のリポジトリでbuildした際にエラーに遭遇してしまったので、その備忘録としてこの記事を残します。<br>
+詳細なエラーとしては以下のような文でした。</p>
+<pre><code>Error: Cannot find module '@babel/compat-data/native-modules'
+</code></pre>
+<p>babel内のモジュールが呼び出せなかったということでした。<br>
+Node.jsのバージョンをあげた際に、babelのも対応させなければなりませんでした。</p>
+<h2><a id="_8"></a>環境</h2>
+<p>Node.js v12.19.1 →　v14.5.0<br>
+@babel/core 7.8.3<br>
+@babel/preset-env 7.8.3</p>
+<h2><a id="_13"></a>解決方法</h2>
+<ol>
+<li>
+<p>@babel系のパッケージをアップデートする</p>
+<p>npm upgrade @babel/core<br>
+npm upgrade @babel/preset-env</p>
+</li>
+</ol>
+<p>このプロジェクトで使っていたBabel系はこの2種類でしたので、npmスクリプトでアップデートしておきました。<br>
+無事アップデートされて、バージョンは以下のようになりました。</p>
+<p>@babel/core 7.12.9<br>
+@babel/preset-env 7.12.7</p>
+<p>これに尽きると思います。<br>
+アップデートをしたくないとういときは、各々のプロジェクトでNode.jsのバージョンを指定してあげればいいですね。</p>
+<p>このような記事を書きましたが、今時Dockerを利用すればプロジェクトの開発環境はすぐ整えれると思いますので、Dockerを使えれるようになれということですね。<br>
+10ヶ月前の自分に言い聞かせたいです。（笑）</p>
+<p>Node.jsのバージョンをあげるときは、気をつけることがまだありそうなので、エラーを見つけ次第この記事をアップデートしていく予定です。</p>
+</div> <div>2020-11-29T00:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(e,n){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:e,linkType:"Space",id:"gl5thp3chw76"}},id:"6G9LnlQOprufclF08KV2yu",type:"Entry",createdAt:n,updatedAt:n,environment:{sys:{id:"master",type:e,linkType:"Environment"}},revision:1,contentType:{sys:{type:e,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"Node.jsのバージョンあげたら過去のプロジェクトでエラーが出たので解決方法の備忘録",discription:"Node.jsのバージョンを最新にあげた時に、過去のプロジェクトでこけたので対策方法を記事として残します。",slug:"nodejs-error-fix",body:"Node.jsでフロント用のテンプレートを作成しているリポジトリがあるのですが、それは10ヶ月前に作成しました。他のプロジェクトでNode.jsのバージョンをあげて作業した際に、過去のリポジトリでbuildした際にエラーに遭遇してしまったので、その備忘録としてこの記事を残します。\n詳細なエラーとしては以下のような文でした。\n\n    Error: Cannot find module '@babel/compat-data/native-modules'\n\nbabel内のモジュールが呼び出せなかったということでした。\nNode.jsのバージョンをあげた際に、babelのも対応させなければなりませんでした。\n\n## 環境\nNode.js v12.19.1 →　v14.5.0\n@babel/core 7.8.3\n@babel/preset-env 7.8.3\n\n## 解決方法\n1. @babel系のパッケージをアップデートする\n\n    npm upgrade @babel/core\n    npm upgrade @babel/preset-env\n\nこのプロジェクトで使っていたBabel系はこの2種類でしたので、npmスクリプトでアップデートしておきました。\n無事アップデートされて、バージョンは以下のようになりました。\n\n@babel/core 7.12.9\n@babel/preset-env 7.12.7\n\nこれに尽きると思います。\nアップデートをしたくないとういときは、各々のプロジェクトでNode.jsのバージョンを指定してあげればいいですね。\n\nこのような記事を書きましたが、今時Dockerを利用すればプロジェクトの開発環境はすぐ整えれると思いますので、Dockerを使えれるようになれということですね。\n10ヶ月前の自分に言い聞かせたいです。（笑）\n\nNode.jsのバージョンをあげるときは、気をつけることがまだありそうなので、エラーを見つけ次第この記事をアップデートしていく予定です。",publishDate:"2020-11-29T00:00+09:00"}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/nodejs-error-fix"}}("Link","2020-11-29T15:11:08.738Z")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
   </body>
 </html>
