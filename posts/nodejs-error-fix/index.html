@@ -16,26 +16,26 @@
 <p>babel内のモジュールが呼び出せなかったということでした。<br>
 Node.jsのバージョンをあげた際に、babelのも対応させなければなりませんでした。</p>
 <h2><a id="_8"></a>環境</h2>
-<p>Node.js v12.19.1 →　v14.5.0<br>
-@babel/core 7.8.3<br>
-@babel/preset-env 7.8.3</p>
-<h2><a id="_13"></a>解決方法</h2>
+<p>Node.js v12.19.1 →　v14.5.0</p>
+<p>@babel/core 7.8.3</p>
+<p>@babel/preset-env 7.8.3</p>
+<h2><a id="_15"></a>解決方法</h2>
 <ol>
 <li>
 <p>@babel系のパッケージをアップデートする</p>
-<p>npm upgrade @babel/core<br>
-npm upgrade @babel/preset-env</p>
+<p>npm upgrade @babel/core</p>
+<p>npm upgrade @babel/preset-env</p>
 </li>
 </ol>
 <p>このプロジェクトで使っていたBabel系はこの2種類でしたので、npmスクリプトでアップデートしておきました。<br>
 無事アップデートされて、バージョンは以下のようになりました。</p>
-<p>@babel/core 7.12.9<br>
-@babel/preset-env 7.12.7</p>
+<p>@babel/core 7.12.9</p>
+<p>@babel/preset-env 7.12.7</p>
 <p>これに尽きると思います。<br>
 アップデートをしたくないとういときは、各々のプロジェクトでNode.jsのバージョンを指定してあげればいいですね。</p>
 <p>このような記事を書きましたが、今時Dockerを利用すればプロジェクトの開発環境はすぐ整えれると思いますので、Dockerを使えれるようになれということですね。<br>
 10ヶ月前の自分に言い聞かせたいです。（笑）</p>
 <p>Node.jsのバージョンをあげるときは、気をつけることがまだありそうなので、エラーを見つけ次第この記事をアップデートしていく予定です。</p>
-</div> <div>2020-11-29T00:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(e,n){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:e,linkType:"Space",id:"gl5thp3chw76"}},id:"6G9LnlQOprufclF08KV2yu",type:"Entry",createdAt:n,updatedAt:n,environment:{sys:{id:"master",type:e,linkType:"Environment"}},revision:1,contentType:{sys:{type:e,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"Node.jsのバージョンあげたら過去のプロジェクトでエラーが出たので解決方法の備忘録",discription:"Node.jsのバージョンを最新にあげた時に、過去のプロジェクトでこけたので対策方法を記事として残します。",slug:"nodejs-error-fix",body:"Node.jsでフロント用のテンプレートを作成しているリポジトリがあるのですが、それは10ヶ月前に作成しました。他のプロジェクトでNode.jsのバージョンをあげて作業した際に、過去のリポジトリでbuildした際にエラーに遭遇してしまったので、その備忘録としてこの記事を残します。\n詳細なエラーとしては以下のような文でした。\n\n    Error: Cannot find module '@babel/compat-data/native-modules'\n\nbabel内のモジュールが呼び出せなかったということでした。\nNode.jsのバージョンをあげた際に、babelのも対応させなければなりませんでした。\n\n## 環境\nNode.js v12.19.1 →　v14.5.0\n@babel/core 7.8.3\n@babel/preset-env 7.8.3\n\n## 解決方法\n1. @babel系のパッケージをアップデートする\n\n    npm upgrade @babel/core\n    npm upgrade @babel/preset-env\n\nこのプロジェクトで使っていたBabel系はこの2種類でしたので、npmスクリプトでアップデートしておきました。\n無事アップデートされて、バージョンは以下のようになりました。\n\n@babel/core 7.12.9\n@babel/preset-env 7.12.7\n\nこれに尽きると思います。\nアップデートをしたくないとういときは、各々のプロジェクトでNode.jsのバージョンを指定してあげればいいですね。\n\nこのような記事を書きましたが、今時Dockerを利用すればプロジェクトの開発環境はすぐ整えれると思いますので、Dockerを使えれるようになれということですね。\n10ヶ月前の自分に言い聞かせたいです。（笑）\n\nNode.jsのバージョンをあげるときは、気をつけることがまだありそうなので、エラーを見つけ次第この記事をアップデートしていく予定です。",publishDate:"2020-11-29T00:00+09:00"}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/nodejs-error-fix"}}("Link","2020-11-29T15:11:08.738Z")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
+</div> <div>2020-11-29T00:00+09:00</div> <div><a href="/frontend/" class="v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--router theme--light v-size--default primary--text"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fas fa-angle-double-left theme--light" style="font-size:16px"></i> <span class="ml-1">ホームへ戻る</span></span></a></div></div></div></div></main></div></div></div></div><script>window.__NUXT__=function(e){return{layout:"default",data:[{currentPost:{sys:{space:{sys:{type:e,linkType:"Space",id:"gl5thp3chw76"}},id:"6G9LnlQOprufclF08KV2yu",type:"Entry",createdAt:"2020-11-29T15:11:08.738Z",updatedAt:"2020-11-29T15:22:01.350Z",environment:{sys:{id:"master",type:e,linkType:"Environment"}},revision:2,contentType:{sys:{type:e,linkType:"ContentType",id:"blog"}},locale:"ja"},fields:{title:"Node.jsのバージョンあげたら過去のプロジェクトでエラーが出たので解決方法の備忘録",discription:"Node.jsのバージョンを最新にあげた時に、過去のプロジェクトでこけたので対策方法を記事として残します。",slug:"nodejs-error-fix",body:"Node.jsでフロント用のテンプレートを作成しているリポジトリがあるのですが、それは10ヶ月前に作成しました。他のプロジェクトでNode.jsのバージョンをあげて作業した際に、過去のリポジトリでbuildした際にエラーに遭遇してしまったので、その備忘録としてこの記事を残します。\n詳細なエラーとしては以下のような文でした。\n\n    Error: Cannot find module '@babel/compat-data/native-modules'\n\nbabel内のモジュールが呼び出せなかったということでした。\nNode.jsのバージョンをあげた際に、babelのも対応させなければなりませんでした。\n\n## 環境\nNode.js v12.19.1 →　v14.5.0\n\n@babel/core 7.8.3\n\n@babel/preset-env 7.8.3\n\n## 解決方法\n1. @babel系のパッケージをアップデートする\n\n    npm upgrade @babel/core\n\n    npm upgrade @babel/preset-env\n\nこのプロジェクトで使っていたBabel系はこの2種類でしたので、npmスクリプトでアップデートしておきました。\n無事アップデートされて、バージョンは以下のようになりました。\n\n@babel/core 7.12.9\n\n@babel/preset-env 7.12.7\n\nこれに尽きると思います。\nアップデートをしたくないとういときは、各々のプロジェクトでNode.jsのバージョンを指定してあげればいいですね。\n\nこのような記事を書きましたが、今時Dockerを利用すればプロジェクトの開発環境はすぐ整えれると思いますので、Dockerを使えれるようになれということですね。\n10ヶ月前の自分に言い聞かせたいです。（笑）\n\nNode.jsのバージョンをあげるときは、気をつけることがまだありそうなので、エラーを見つけ次第この記事をアップデートしていく予定です。",publishDate:"2020-11-29T00:00+09:00"}}}],fetch:[],error:null,state:{},serverRendered:!0,routePath:"/posts/nodejs-error-fix"}}("Link")</script><script src="/frontend/_nuxt/995e6995288ee21959f4.js" defer></script><script src="/frontend/_nuxt/ad2688273bbee6d64de7.js" defer></script><script src="/frontend/_nuxt/67cea4a34267d02ace26.js" defer></script><script src="/frontend/_nuxt/6c75fbec3f59cc70ec7c.js" defer></script><script src="/frontend/_nuxt/01a3a436f16bffcc16c7.js" defer></script>
   </body>
 </html>
