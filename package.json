@@ -23,7 +23,7 @@
     "contentful": "^7.14.0",
     "dayjs": "^1.8.24",
     "markdown-it-toc": "^1.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.0.0",
     "nuxt-property-decorator": "^2.5.1",
     "prismjs": "^1.20.0",
